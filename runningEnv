@@ -1,0 +1,13 @@
+#! /usr/bin/env python3.8
+
+import os
+
+runEnv = os.environ["ENV"].upper()
+
+output = f"we are working in {runEnv}"
+
+if runEnv.startswith('PROD'):
+    output = f"DANGER - We are working in PROD envirnoment"
+
+print(output)
+

@@ -1,0 +1,12 @@
+#! /usr/bin/env python3.8
+
+import os
+
+runEnv = os.getenv("ENV", default="dev").upper()
+
+output = f"We are working in {runEnv}"
+
+if runEnv.startswith('PROD'):
+    output = "CAUTION !!" + output
+
+print(output)
